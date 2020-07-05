@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="AlR-Xh-CTT">
+            <objects>
+                <navigationController id="nBY-eC-cNt" customClass="BaseNavigationController" customModule="Bomapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="bWu-Nl-CH7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vjG-ks-nRF" kind="relationship" relationship="rootViewController" id="LyY-nr-Szc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vfo-lF-J2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="783"/>
+        </scene>
+        <!--Search Main View Controller-->
+        <scene sceneID="lPB-hv-x6w">
+            <objects>
+                <viewController storyboardIdentifier="SearchMainView" id="vjG-ks-nRF" customClass="SearchMainViewController" customModule="Bomapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kqj-FN-dCH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="9K4-Uc-GdC">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="40" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fxH-CQ-6LY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xiP-gX-CaL" firstAttribute="bottom" secondItem="9K4-Uc-GdC" secondAttribute="bottom" id="D5T-cZ-1Av"/>
+                            <constraint firstItem="9K4-Uc-GdC" firstAttribute="top" secondItem="xiP-gX-CaL" secondAttribute="top" id="DeZ-yN-ua7"/>
+                            <constraint firstItem="9K4-Uc-GdC" firstAttribute="leading" secondItem="xiP-gX-CaL" secondAttribute="leading" id="iD3-DR-W1e"/>
+                            <constraint firstItem="xiP-gX-CaL" firstAttribute="trailing" secondItem="9K4-Uc-GdC" secondAttribute="trailing" id="jL6-mx-t7N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xiP-gX-CaL"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="4Mo-eK-eix"/>
+                    <connections>
+                        <outlet property="tableView" destination="9K4-Uc-GdC" id="1ef-zZ-igY"/>
+                        <segue destination="m0P-Fo-HEV" kind="show" id="aHq-vO-eWE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFV-kO-shE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="60"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="in6-sv-PMN">
+            <objects>
+                <viewController storyboardIdentifier="SearchDetailView" id="m0P-Fo-HEV" customClass="BaseViewController" customModule="Bomapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9sW-TG-5j5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Its-uw-wCt">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Its-uw-wCt" firstAttribute="top" secondItem="iid-Mq-IGX" secondAttribute="top" id="PGU-em-rb4"/>
+                            <constraint firstItem="iid-Mq-IGX" firstAttribute="trailing" secondItem="Its-uw-wCt" secondAttribute="trailing" id="fsC-cC-zho"/>
+                            <constraint firstItem="Its-uw-wCt" firstAttribute="leading" secondItem="iid-Mq-IGX" secondAttribute="leading" id="vtu-AV-bOi"/>
+                            <constraint firstItem="iid-Mq-IGX" firstAttribute="bottom" secondItem="Its-uw-wCt" secondAttribute="bottom" id="zn9-cy-uoW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iid-Mq-IGX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kwx-1j-bkS"/>
+                    <connections>
+                        <outlet property="tableView" destination="Its-uw-wCt" id="Hvb-E0-Cji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHE-11-4uW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="60"/>
+        </scene>
+    </scenes>
+</document>
